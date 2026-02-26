@@ -1,5 +1,5 @@
 title: Quantum Shift
-description: Science, energy, and the future.
+description: Energy systems, infrastructure markets, and operational analysis.
 logo: /assets/images/og-default.png
 url: "https://qshift.github.io"
 baseurl: ""
@@ -82,8 +82,12 @@ navigation:
     url: /
   - title: Topics
     url: /topics/
-  - title: Archive
-    url: /archive/
+  - title: Briefings
+    url: /briefings/
+  - title: Method
+    url: /method/
+  - title: Contact
+    url: /contact/
 
 secondary_navigation:
   - title: About
