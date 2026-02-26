@@ -1,17 +1,19 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="light">
+
+<html lang="en" data-brand="qshift" data-theme="dark">
 <head>
   <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>howto — Loom</title>
-<meta name="description" content="Jekyll theme. Clean typography, dark mode, computational essays.">
+<title>howto — Quantum Shift</title>
+<meta name="description" content="Energy systems, infrastructure markets, and operational analysis.">
 
 <!-- Dark mode flash prevention — runs synchronously before first paint -->
 <script>
   (function () {
-    var s = localStorage.getItem('loom-dark');
-    var dark = s !== null ? s === '1' : window.matchMedia('(prefers-color-scheme: dark)').matches;
+    var defaultDark = 'dark' === 'dark';
+    var s = localStorage.getItem('theme');
+    var dark = s !== null ? s === 'dark' : defaultDark;
     document.documentElement.dataset.theme = dark ? 'dark' : 'light';
   })();
 </script>
@@ -31,7 +33,11 @@
 <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,400&display=swap" rel="stylesheet">
 
 <!-- Theme stylesheet (Vite build output) -->
-<link rel="stylesheet" href="/assets/built/main.css">
+<link rel="stylesheet" href="/assets/dist/main.css">
+
+<!-- Brand token overrides — loaded after main.css so variables cascade correctly -->
+
+<link rel="stylesheet" href="/assets/css/brand-qshift.css">
 
 
 
@@ -39,21 +45,21 @@
 <link rel="stylesheet" href="/assets/css/syntax.css">
 
 <!-- Begin Jekyll SEO tag v2.8.0 -->
-<title>howto | Loom</title>
+<title>howto | Quantum Shift</title>
 <meta name="generator" content="Jekyll v4.4.1" />
 <meta property="og:title" content="howto" />
 <meta property="og:locale" content="en" />
-<meta name="description" content="Jekyll theme. Clean typography, dark mode, computational essays." />
-<meta property="og:description" content="Jekyll theme. Clean typography, dark mode, computational essays." />
-<link rel="canonical" href="/tag/howto/" />
-<meta property="og:url" content="/tag/howto/" />
-<meta property="og:site_name" content="Loom" />
+<meta name="description" content="Energy systems, infrastructure markets, and operational analysis." />
+<meta property="og:description" content="Energy systems, infrastructure markets, and operational analysis." />
+<link rel="canonical" href="https://qshift.github.io/tag/howto/" />
+<meta property="og:url" content="https://qshift.github.io/tag/howto/" />
+<meta property="og:site_name" content="Quantum Shift" />
 <meta property="og:type" content="website" />
 <meta name="twitter:card" content="summary" />
 <meta property="twitter:title" content="howto" />
 <meta name="twitter:site" content="@" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"WebPage","description":"Jekyll theme. Clean typography, dark mode, computational essays.","headline":"howto","publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"/assets/images/loom_collective.jpg"}},"url":"/tag/howto/"}</script>
+{"@context":"https://schema.org","@type":"WebPage","description":"Energy systems, infrastructure markets, and operational analysis.","headline":"howto","publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"https://qshift.github.io/assets/images/og-default.png"}},"url":"https://qshift.github.io/tag/howto/"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -79,8 +85,10 @@
 
     <!-- Logo -->
     <a href="/" class="nav-logo">
-      <img loading="lazy" src="/assets/images/loom_collective.jpg" alt="Loom" width="32" height="32">
-      Loom<span>.</span>
+      
+      <img loading="lazy" src="/assets/images/og-default.png" alt="Quantum Shift" width="32" height="32">
+      
+      Quantum Shift<span>.</span>
     </a>
 
     <!-- Desktop nav links -->
@@ -95,7 +103,15 @@
       </li>
       
       <li>
-        <a href="/archive/">Archive</a>
+        <a href="/briefings/">Briefings</a>
+      </li>
+      
+      <li>
+        <a href="/method/">Method</a>
+      </li>
+      
+      <li>
+        <a href="/contact/">Contact</a>
       </li>
       
     </ul>
@@ -190,7 +206,15 @@
       </li>
       
       <li>
-        <a href="/archive/" @click="open = false">Archive</a>
+        <a href="/briefings/" @click="open = false">Briefings</a>
+      </li>
+      
+      <li>
+        <a href="/method/" @click="open = false">Method</a>
+      </li>
+      
+      <li>
+        <a href="/contact/" @click="open = false">Contact</a>
       </li>
       
     </ul>
@@ -287,11 +311,13 @@
     <!-- Col 1: Brand -->
     <div class="footer-brand">
       <div class="footer-brand-logo">
-        <img loading="lazy" src="/assets/images/loom_collective.jpg" alt="Loom" width="28" height="28">
-        Loom<span>.</span>
+        
+        <img loading="lazy" src="/assets/images/og-default.png" alt="Quantum Shift" width="28" height="28">
+        
+        Quantum Shift<span>.</span>
       </div>
       
-      <p class="footer-brand-desc">Jekyll theme. Clean typography, dark mode, computational essays.</p>
+      <p class="footer-brand-desc">Energy systems, infrastructure markets, and operational analysis.</p>
       
 
       <div class="footer-social">
@@ -349,7 +375,7 @@
 
   <div class="footer-bottom">
     <span class="footer-copy">
-      &copy; 2026 Loom.
+      &copy; 2026 Quantum Shift.
     </span>
     <div class="footer-legal">
       <a href="/privacy/">Privacy Policy</a>
@@ -361,7 +387,7 @@
 
 
 <!-- Alpine.js bundle -->
-<script type="module" src="/assets/built/main.js"></script>
+<script type="module" src="/assets/dist/main.js"></script>
 
 <!-- Visualization runtime — detects and loads CDN libraries dynamically -->
 <script type="module" src="/assets/js/core.js"></script>
