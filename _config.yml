@@ -1,6 +1,6 @@
 title: Quantum Shift
 description: Energy systems, infrastructure markets, and operational analysis.
-logo: /assets/images/og-default.png
+logo: /assets/images/og-default.webp
 url: "https://qshift.github.io"
 baseurl: ""
 author: ""
@@ -43,7 +43,7 @@ defaults:
       path: "_posts"
     values:
       layout: post
-      image: /assets/images/og-default.png
+      image: /assets/images/og-default.webp
   - scope:
       path: "_pages"
     values:
