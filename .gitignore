@@ -6,3 +6,4 @@ node_modules/
 Gemfile.lock
 assets/built/
 assets/dist/
+.DS_Store
